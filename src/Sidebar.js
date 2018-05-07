@@ -7,19 +7,28 @@ import sortBy from 'sort-by';
 
 import { FSQUARE_CLIENT_ID, FSQUARE_CLIENT_SECRET } from './constants';
 
+import Location from './Location';
+
 import defaultIcon from './icons/iconDefaultLocation.svg';
 import activeIcon from './icons/iconActiveLocation.svg';
+// https://github.com/SamHerbert/SVG-Loaders
+import spinnerIcon from './images/puff.svg';
 
 class Sidebar extends Component {
   state = {
     filterTerm: '',
-    locations: []
+    locations: [],
+    locationsError: false
   };
 
   componentDidMount() {
-    this.fetchCoworkingsFS().then(coworkings => {
-      this.setState({ locations: coworkings });
-    });
+    this.fetchCoworkingsFS()
+      .then(coworkings => {
+        this.setState({ locations: coworkings });
+      })
+      .catch(err => {
+        this.setState({ locationsError: true });
+      });
   }
 
   fetchCoworkingsFS = () => {
@@ -33,7 +42,11 @@ class Sidebar extends Component {
     const fsEndpoint = `${fsURL}?ll=${lat},${lng}&client_id=${FSQUARE_CLIENT_ID}&client_secret=${FSQUARE_CLIENT_SECRET}&radius=${radius}&categoryId=${categoryId}&limit=30&v=20180504`;
 
     return fetch(fsEndpoint)
-      .then(response => response.json())
+      .then(response => {
+        if (!response.ok) throw response;
+
+        return response.json();
+      })
       .then(data => {
         const { venues } = data.response;
 
@@ -99,7 +112,7 @@ class Sidebar extends Component {
 
   render() {
     const { onOpenInfoWindow } = this.props;
-    const { locations, filterTerm } = this.state;
+    const { locations, filterTerm, locationsError } = this.state;
 
     let filteredLocations;
 
@@ -127,35 +140,39 @@ class Sidebar extends Component {
           <p className="sidebar__description">
             Find the top 20 coworking spaces near Paulista Avenue, São Paulo
           </p>
-          <input
-            className="header__filter-input"
-            name="filter"
-            type="text"
-            placeholder="Filter by name..."
-            value={this.state.filterTerm}
-            onChange={this.handleFilterInputChange}
-          />
+
+          {!locationsError ? (
+            <input
+              className="header__filter-input"
+              name="filter"
+              type="text"
+              placeholder="Filter by name..."
+              value={this.state.filterTerm}
+              onChange={this.handleFilterInputChange}
+            />
+          ) : null}
         </header>
-        <ul>
-          {filteredLocations.map(location => (
-            <li
-              className="location-card"
-              key={location.id}
-              onMouseEnter={() => this.handleItemHover(location.marker)}
-              onMouseLeave={() => this.handleItemBlur(location.marker)}
-              onClick={() => onOpenInfoWindow(location)}
-            >
-              <div className="location-card__label">
-                <span>
-                  <h2> {location.marker.label.text} </h2>
-                </span>
-              </div>
-              <div className="location-card__content">
-                <h3> {location.name} </h3>
-              </div>
-            </li>
-          ))}
-        </ul>
+
+        {!locationsError ? (
+          <ul>
+            {filteredLocations.map(location => (
+              <Location
+                key={location.id}
+                location={location}
+                onItemHover={this.handleItemHover}
+                onItemBlur={this.handleItemBlur}
+                onOpenInfoWindow={onOpenInfoWindow}
+              />
+            ))}
+          </ul>
+        ) : (
+          <div className="list-error-message">
+            <h1>
+              An error occurred while trying to load the coworkings list. Please
+              try refreshing the page.
+            </h1>
+          </div>
+        )}
       </aside>
     );
   }
