@@ -1,0 +1,1212 @@
+{
+  "meta": {
+    "code": 200,
+    "requestId": "5af05e3cdd579731e6aa73c2"
+  },
+  "response": {
+    "venues": [
+      {
+        "id": "55c8ebb3498ed9e7e836b04e",
+        "name": "Sette Câmara, Corrêa e Bastos - Advogados Associados",
+        "location": {
+          "address": "Avenida Paulista - Ed Paulista 1.100",
+          "lat": -23.56537257654277,
+          "lng": -46.6526874356159,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.56537257654277,
+              "lng": -46.6526874356159
+            }
+          ],
+          "distance": 84,
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Avenida Paulista - Ed Paulista 1.100",
+            "São Paulo, SP",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d127941735",
+            "name": "Conference Room",
+            "pluralName": "Conference Rooms",
+            "shortName": "Conference room",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_conferenceroom_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702204",
+        "hasPerk": false
+      },
+      {
+        "id": "5331c92a498e7c2cba164330",
+        "name": "Febracis SP",
+        "location": {
+          "lat": -23.56679257359382,
+          "lng": -46.65153261226098,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.56679257359382,
+              "lng": -46.65153261226098
+            }
+          ],
+          "distance": 168,
+          "cc": "BR",
+          "country": "Brazil",
+          "formattedAddress": ["Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702204",
+        "hasPerk": false
+      },
+      {
+        "id": "4bf7e1bc4a67c928234724cf",
+        "name": "Itaú",
+        "location": {
+          "address": "Av. Paulista, 1337",
+          "crossStreet": "Ag. 8577 - Nova Bela Vista",
+          "lat": -23.564144475610142,
+          "lng": -46.65335655212402,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.564144475610142,
+              "lng": -46.65335655212402
+            }
+          ],
+          "distance": 218,
+          "postalCode": "01311-200",
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Av. Paulista, 1337 (Ag. 8577 - Nova Bela Vista)",
+            "São Paulo, SP",
+            "01311-200",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d10a951735",
+            "name": "Bank",
+            "pluralName": "Banks",
+            "shortName": "Bank",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/shops/financial_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702204",
+        "hasPerk": false
+      },
+      {
+        "id": "4f7c6d16e4b07f26b79ef0fa",
+        "name": "Marubeni Brasil S/A",
+        "location": {
+          "address": "Av. Paulista, 854",
+          "crossStreet": "Al. Joaquim Eugenio de Lima",
+          "lat": -23.565569712137844,
+          "lng": -46.650293188751554,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.565569712137844,
+              "lng": -46.650293188751554
+            }
+          ],
+          "distance": 280,
+          "postalCode": "01310-913",
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Av. Paulista, 854 (Al. Joaquim Eugenio de Lima)",
+            "São Paulo, SP",
+            "01310-913",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702204",
+        "hasPerk": false
+      },
+      {
+        "id": "5159fe94e4b0ef128f0f0d76",
+        "name": "Coworking Space FIAP",
+        "location": {
+          "address": "Av. Paulista, 1106",
+          "crossStreet": "7º Andar",
+          "lat": -23.564336401858814,
+          "lng": -46.65264930461505,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.564336401858814,
+              "lng": -46.65264930461505
+            }
+          ],
+          "distance": 196,
+          "postalCode": "01310-100",
+          "cc": "BR",
+          "neighborhood": "Avenida Paulista",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Av. Paulista, 1106 (7º Andar)",
+            "São Paulo, SP",
+            "01310-100",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702204",
+        "hasPerk": false
+      },
+      {
+        "id": "51310ca8e4b0eacbbc2b7054",
+        "name": "Streaming Brasil - Escritório  Paulista 1",
+        "location": {
+          "lat": -23.565734763046013,
+          "lng": -46.653036244657166,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.565734763046013,
+              "lng": -46.653036244657166
+            }
+          ],
+          "distance": 38,
+          "cc": "BR",
+          "country": "Brazil",
+          "formattedAddress": ["Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702204",
+        "hasPerk": false
+      },
+      {
+        "id": "4f8ebeaae4b0f9f93e279a56",
+        "name": "Lima Junior",
+        "location": {
+          "lat": -23.566471997046943,
+          "lng": -46.652772280834085,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.566471997046943,
+              "lng": -46.652772280834085
+            }
+          ],
+          "distance": 48,
+          "cc": "BR",
+          "country": "Brazil",
+          "formattedAddress": ["Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702204",
+        "hasPerk": false
+      },
+      {
+        "id": "4fc79fe7e4b0a6960d18a669",
+        "name": "Sidmex Internacional",
+        "location": {
+          "address": "Av Paulista, 1079",
+          "crossStreet": "Al Campinas",
+          "lat": -23.565220056054095,
+          "lng": -46.65313994511232,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.565220056054095,
+              "lng": -46.65313994511232
+            }
+          ],
+          "distance": 96,
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Av Paulista, 1079 (Al Campinas)",
+            "São Paulo, SP",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702204",
+        "hasPerk": false
+      },
+      {
+        "id": "50ec0eafe4b074765c9f4747",
+        "name": "Fd Golf DTVM",
+        "location": {
+          "lat": -23.565025,
+          "lng": -46.653729,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.565025,
+              "lng": -46.653729
+            }
+          ],
+          "distance": 139,
+          "cc": "BR",
+          "country": "Brazil",
+          "formattedAddress": ["Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702204",
+        "hasPerk": false
+      },
+      {
+        "id": "4ebd250982317d5cdaf15542",
+        "name": "PromoAção",
+        "location": {
+          "address": "Rua Joaquim Eugênio Lima, 680, CJ 63",
+          "lat": -23.567094,
+          "lng": -46.652202,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.567094,
+              "lng": -46.652202
+            }
+          ],
+          "distance": 138,
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Rua Joaquim Eugênio Lima, 680, CJ 63",
+            "São Paulo, SP",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702204",
+        "hasPerk": false
+      },
+      {
+        "id": "4f291868e4b01c8767eb24ac",
+        "name": "J&W Informática",
+        "location": {
+          "address": "Av. Paulista, 1776 - Bela Vista, São Paulo, 01310-200",
+          "lat": -23.565243627664398,
+          "lng": -46.651966257082684,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.565243627664398,
+              "lng": -46.651966257082684
+            }
+          ],
+          "distance": 139,
+          "postalCode": "01310-200",
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Av. Paulista, 1776 - Bela Vista, São Paulo, 01310-200",
+            "São Paulo, SP",
+            "01310-200",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702204",
+        "hasPerk": false
+      },
+      {
+        "id": "4db9703c4b22a2fe44f1dd7e",
+        "name": "Autbank Projetos e Consultoria",
+        "location": {
+          "address": "Alameda Santos, 800",
+          "crossStreet": "Alameda Joaquim Eugenio de Lima",
+          "lat": -23.567057,
+          "lng": -46.652037,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.567057,
+              "lng": -46.652037
+            }
+          ],
+          "distance": 145,
+          "postalCode": "01419-001",
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Alameda Santos, 800 (Alameda Joaquim Eugenio de Lima)",
+            "São Paulo, SP",
+            "01419-001",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702204",
+        "hasPerk": false
+      },
+      {
+        "id": "4d6b8f5fdc858cfa4c5d7373",
+        "name": "Made In Web",
+        "location": {
+          "address": "Av: Paulista, 1159",
+          "crossStreet": "Sala 717",
+          "lat": -23.564871047827133,
+          "lng": -46.65366903037607,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.564871047827133,
+              "lng": -46.65366903037607
+            }
+          ],
+          "distance": 151,
+          "postalCode": "01311-200",
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Av: Paulista, 1159 (Sala 717)",
+            "São Paulo, SP",
+            "01311-200",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "4f477bf7e4b0dd9bf31cdebd",
+        "name": "Jurídico Petrobras",
+        "location": {
+          "lat": -23.566732572355445,
+          "lng": -46.651627895802285,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.566732572355445,
+              "lng": -46.651627895802285
+            }
+          ],
+          "distance": 156,
+          "cc": "BR",
+          "country": "Brazil",
+          "formattedAddress": ["Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "50fc8b5fe4b064cc8c2bcc84",
+        "name": "Bright Star Business Corp",
+        "location": {
+          "address": "Av Paulista 1159",
+          "lat": -23.56472163744226,
+          "lng": -46.652946685346485,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.56472163744226,
+              "lng": -46.652946685346485
+            }
+          ],
+          "distance": 151,
+          "cc": "BR",
+          "country": "Brazil",
+          "formattedAddress": ["Av Paulista 1159", "Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "502d2e53e4b08345cbc24208",
+        "name": "Dasein Executive Search - São Paulo",
+        "location": {
+          "address": "Av. Paulista, 1079",
+          "lat": -23.565395,
+          "lng": -46.653299,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.565395,
+              "lng": -46.653299
+            }
+          ],
+          "distance": 82,
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": ["Av. Paulista, 1079", "São Paulo, SP", "Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "4f4699dde4b068bc665e53f1",
+        "name": "Nieves & Nieves Advogados",
+        "location": {
+          "address": "Av. Paulista, 1.159 - 14 andar",
+          "lat": -23.5642269,
+          "lng": -46.653159,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.5642269,
+              "lng": -46.653159
+            }
+          ],
+          "distance": 206,
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Av. Paulista, 1.159 - 14 andar",
+            "São Paulo, SP",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "51f1666e454a2c9371e0cae8",
+        "name": "Gowork Paulista Coworking",
+        "location": {
+          "address": "Av Paulista, 807, 23º andar",
+          "crossStreet": "estação brigadeiro do metro",
+          "lat": -23.56644088234468,
+          "lng": -46.65079446011901,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.56644088234468,
+              "lng": -46.65079446011901
+            }
+          ],
+          "distance": 227,
+          "postalCode": "01311-915",
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Av Paulista, 807, 23º andar (estação brigadeiro do metro)",
+            "São Paulo, SP",
+            "01311-915",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "4bcd99a8fb84c9b67532223e",
+        "name": "Marketing House",
+        "location": {
+          "lat": -23.56454261325625,
+          "lng": -46.651890840321386,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.56454261325625,
+              "lng": -46.651890840321386
+            }
+          ],
+          "distance": 204,
+          "cc": "BR",
+          "country": "Brazil",
+          "formattedAddress": ["Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "4f8c994ce4b04e7d33db98ae",
+        "name": "Plimax",
+        "location": {
+          "address": "Rua Pamplona, 818 - 5 Andar",
+          "lat": -23.56544832162341,
+          "lng": -46.65502073165181,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.56544832162341,
+              "lng": -46.65502073165181
+            }
+          ],
+          "distance": 219,
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Rua Pamplona, 818 - 5 Andar",
+            "São Paulo, SP",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "4f5de4dee4b0090c0bc2865c",
+        "name": "Ancive",
+        "location": {
+          "lat": -23.56572736878918,
+          "lng": -46.651443055647505,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.56572736878918,
+              "lng": -46.651443055647505
+            }
+          ],
+          "distance": 162,
+          "cc": "BR",
+          "country": "Brazil",
+          "formattedAddress": ["Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "4f4cf358e4b023d675ce8516",
+        "name": "Hitachi Kokusai Linear São Paulo",
+        "location": {
+          "address": "Av. Paulista 1159",
+          "crossStreet": "Conj 304",
+          "lat": -23.56456242808589,
+          "lng": -46.65349066257477,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.56456242808589,
+              "lng": -46.65349066257477
+            }
+          ],
+          "distance": 176,
+          "postalCode": "01311-200",
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Av. Paulista 1159 (Conj 304)",
+            "São Paulo, SP",
+            "01311-200",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "4fccaf22e4b05b50353c3de3",
+        "name": "Taverneiro, Varga Advogados Associados",
+        "location": {
+          "address": "Alameda Joaquim Eugênio De Lima, 739",
+          "lat": -23.56763372364577,
+          "lng": -46.65247060960225,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.56763372364577,
+              "lng": -46.65247060960225
+            }
+          ],
+          "distance": 180,
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Alameda Joaquim Eugênio De Lima, 739",
+            "São Paulo, SP",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "4f05a584be7bf2206ef62250",
+        "name": "Consorcio Conest/RNEST",
+        "location": {
+          "address": "Av. Paulista 1106",
+          "lat": -23.564461184560734,
+          "lng": -46.65286655346784,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.564461184560734,
+              "lng": -46.65286655346784
+            }
+          ],
+          "distance": 180,
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": ["Av. Paulista 1106", "São Paulo, SP", "Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "4fc3b338e4b04bdf299cbcfc",
+        "name": "Nomina design",
+        "location": {
+          "address": "Avenida Paulista, 807, Conj 1505",
+          "lat": -23.566591262817383,
+          "lng": -46.651363372802734,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.566591262817383,
+              "lng": -46.651363372802734
+            }
+          ],
+          "distance": 174,
+          "cc": "BR",
+          "country": "Brazil",
+          "formattedAddress": ["Avenida Paulista, 807, Conj 1505", "Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "509e26d1e4b01718b26b25bb",
+        "name": "Portal Terceiro Tempo",
+        "location": {
+          "address": "Avenida Paulista",
+          "lat": -23.566271119733596,
+          "lng": -46.65058672853235,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.566271119733596,
+              "lng": -46.65058672853235
+            }
+          ],
+          "distance": 245,
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": ["Avenida Paulista", "São Paulo, SP", "Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "4f60849ee4b0d9c9021b6b89",
+        "name": "FEBRAFAR",
+        "location": {
+          "address": "Av. Paulista, 2300 14Andar",
+          "lat": -23.56660883056156,
+          "lng": -46.65064176678135,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.56660883056156,
+              "lng": -46.65064176678135
+            }
+          ],
+          "distance": 246,
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Av. Paulista, 2300 14Andar",
+            "São Paulo, SP",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "4f3a3ebae4b0e724f0f68300",
+        "name": "VitoriaCI",
+        "location": {
+          "address": "Alameda Campinas, 728 Conjunto 123",
+          "lat": -23.567539946083514,
+          "lng": -46.6550065901353,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.567539946083514,
+              "lng": -46.6550065901353
+            }
+          ],
+          "distance": 262,
+          "cc": "BR",
+          "country": "Brazil",
+          "formattedAddress": ["Alameda Campinas, 728 Conjunto 123", "Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d124941735",
+            "name": "Office",
+            "pluralName": "Offices",
+            "shortName": "Office",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/default_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "4ed62eff30f813e77a9c6002",
+        "name": "LaGuardiana",
+        "location": {
+          "address": "Al. Joaquim Eugênio De Lima 881 Conj. 808",
+          "lat": -23.568780973723573,
+          "lng": -46.653083381200986,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.568780973723573,
+              "lng": -46.653083381200986
+            }
+          ],
+          "distance": 300,
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": [
+            "Al. Joaquim Eugênio De Lima 881 Conj. 808",
+            "São Paulo, SP",
+            "Brazil"
+          ]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      },
+      {
+        "id": "50be64f1e4b0141d963f829f",
+        "name": "Locutório #2",
+        "location": {
+          "lat": -23.563034524437548,
+          "lng": -46.65291368985147,
+          "labeledLatLngs": [
+            {
+              "label": "display",
+              "lat": -23.563034524437548,
+              "lng": -46.65291368985147
+            }
+          ],
+          "distance": 338,
+          "cc": "BR",
+          "city": "São Paulo",
+          "state": "SP",
+          "country": "Brazil",
+          "formattedAddress": ["São Paulo, SP", "Brazil"]
+        },
+        "categories": [
+          {
+            "id": "4bf58dd8d48988d174941735",
+            "name": "Coworking Space",
+            "pluralName": "Coworking Spaces",
+            "shortName": "Coworking Space",
+            "icon": {
+              "prefix":
+                "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+              "suffix": ".png"
+            },
+            "primary": true
+          }
+        ],
+        "referralId": "v-1525702205",
+        "hasPerk": false
+      }
+    ],
+    "confident": true
+  }
+}

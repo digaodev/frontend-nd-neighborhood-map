@@ -15,7 +15,7 @@
   /* min-height: 100%; */
 }
 
-.sidebar__description{
+.sidebar__description {
   text-align: center;
 }
 
@@ -46,6 +46,21 @@
   letter-spacing: 0.1rem;
 }
 
+.sidebar__icon {
+  display: inline-block;
+  color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  font-size: 0;
+}
+
+.office {
+  width: 40px;
+  height: 40px;
+  background-image: url('./icons/office.svg');
+}
+
 .location-card {
   background-color: #fff;
   padding: 1rem;
@@ -61,6 +76,7 @@
   transform: translateX(6px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.19), 0 4px 4px rgba(0, 0, 0, 0.23);
 }
+
 .location-card:hover span,
 .location-card:hover h2 {
   color: #ff9800;
@@ -87,4 +103,79 @@
   color: #333;
   margin-left: 1rem;
   flex: 1;
+}
+
+/* MAP INFO WINDOW STYLES */
+
+.infow__container {
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.infow__header {
+  color: #673ab7;
+  padding: 0.5rem 0;
+  letter-spacing: 0.1rem;
+  border-bottom: 1px solid #673ab7;
+  display: flex;
+  align-items: center;
+}
+
+.infow__header__maintitle {
+  flex: 1;
+}
+
+.infow__header__badge {
+  color: #fff;
+  background-color: #673ab7;
+  padding: 0.3rem 0.5rem;
+  border-radius: 0.3rem;
+  margin-left: 1rem;
+  font-size: 0.6rem;
+  font-weight: bold;
+}
+
+.infow__main {
+  padding: 0.5rem;
+  max-height: 200px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.infow__main__img {
+  /* float: left; */
+  /* width: 100%; */
+  /* margin: 0 5px 5px 10px; */
+  flex: 1 1 30%;
+  background: url(http://maps.marnoto.com/en/5wayscustomizeinfowindow/images/vistalegre.jpg);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.infow__main__content {
+  flex: 1 1 70%;
+  padding: 0.5rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.infow__main__subtitle {
+  /* font-size: 16px;
+  font-weight: 700; */
+  color: #673ab7;
+  /* padding-bottom: 0.3rem; */
+  margin: 0.5rem 0 0.3rem 0;
+  /* border-bottom: 1px solid #673ab7; */
+}
+
+.infow__main__content p {
+  padding: 0 0.5rem;
+}
+
+.infow__main__more {
+  margin: 1rem 0 0 0;
 }

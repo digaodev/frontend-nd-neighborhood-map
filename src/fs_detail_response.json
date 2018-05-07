@@ -1,0 +1,158 @@
+{
+  "meta": {
+    "code": 200,
+    "requestId": "5af05fc64434b920f33dfdc2"
+  },
+  "response": {
+    "venue": {
+      "id": "4f5de4dee4b0090c0bc2865c",
+      "name": "Ancive",
+      "contact": {},
+      "location": {
+        "lat": -23.56572736878918,
+        "lng": -46.651443055647505,
+        "labeledLatLngs": [
+          {
+            "label": "display",
+            "lat": -23.56572736878918,
+            "lng": -46.651443055647505
+          }
+        ],
+        "cc": "BR",
+        "country": "Brazil",
+        "formattedAddress": ["Brazil"]
+      },
+      "canonicalUrl":
+        "https://foursquare.com/v/ancive/4f5de4dee4b0090c0bc2865c",
+      "categories": [
+        {
+          "id": "4bf58dd8d48988d174941735",
+          "name": "Coworking Space",
+          "pluralName": "Coworking Spaces",
+          "shortName": "Coworking Space",
+          "icon": {
+            "prefix":
+              "https://ss3.4sqi.net/img/categories_v2/building/office_coworkingspace_",
+            "suffix": ".png"
+          },
+          "primary": true
+        }
+      ],
+      "verified": false,
+      "stats": {
+        "tipCount": 0
+      },
+      "likes": {
+        "count": 0,
+        "groups": []
+      },
+      "dislike": false,
+      "ok": false,
+      "venueRatingBlacklisted": true,
+      "beenHere": {
+        "count": 0,
+        "unconfirmedCount": 0,
+        "marked": false,
+        "lastCheckinExpiredAt": 0
+      },
+      "specials": {
+        "count": 0,
+        "items": []
+      },
+      "photos": {
+        "count": 1,
+        "groups": [
+          {
+            "type": "venue",
+            "name": "Venue photos",
+            "count": 1,
+            "items": [
+              {
+                "id": "511cbae5e4b05f03df11d1ce",
+                "createdAt": 1360837349,
+                "source": {
+                  "name": "Foursquare for iOS",
+                  "url": "https://foursquare.com/download/#/iphone"
+                },
+                "prefix": "https://igx.4sqi.net/img/general/",
+                "suffix":
+                  "/15018411_hN7gDpjBvHtxYAXfaihArU0petMFO3HVvbN06-mlwp8.jpg",
+                "width": 720,
+                "height": 960,
+                "user": {
+                  "id": "15018411",
+                  "firstName": "Robson",
+                  "lastName": "Tosta",
+                  "gender": "male",
+                  "photo": {
+                    "prefix": "https://igx.4sqi.net/img/user/",
+                    "suffix": "/NUK02J3HXL25EHGC.jpg"
+                  }
+                },
+                "visibility": "public"
+              }
+            ]
+          }
+        ]
+      },
+      "reasons": {
+        "count": 0,
+        "items": []
+      },
+      "hereNow": {
+        "count": 0,
+        "summary": "Nobody here",
+        "groups": []
+      },
+      "createdAt": 1331553502,
+      "tips": {
+        "count": 0,
+        "groups": [
+          {
+            "type": "others",
+            "name": "All tips",
+            "count": 0,
+            "items": []
+          }
+        ]
+      },
+      "shortUrl": "http://4sq.com/AwLaJQ",
+      "timeZone": "America/Sao_Paulo",
+      "listed": {
+        "count": 0,
+        "groups": [
+          {
+            "type": "others",
+            "name": "Lists from other people",
+            "count": 0,
+            "items": []
+          }
+        ]
+      },
+      "pageUpdates": {
+        "count": 0,
+        "items": []
+      },
+      "inbox": {
+        "count": 0,
+        "items": []
+      },
+      "attributes": {
+        "groups": []
+      },
+      "bestPhoto": {
+        "id": "511cbae5e4b05f03df11d1ce",
+        "createdAt": 1360837349,
+        "source": {
+          "name": "Foursquare for iOS",
+          "url": "https://foursquare.com/download/#/iphone"
+        },
+        "prefix": "https://igx.4sqi.net/img/general/",
+        "suffix": "/15018411_hN7gDpjBvHtxYAXfaihArU0petMFO3HVvbN06-mlwp8.jpg",
+        "width": 720,
+        "height": 960,
+        "visibility": "public"
+      }
+    }
+  }
+}
