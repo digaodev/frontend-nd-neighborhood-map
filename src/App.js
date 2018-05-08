@@ -2,14 +2,14 @@ import React, { Component } from 'react';
 
 import asyncScriptLoader from 'react-async-script-loader';
 
-import './App.css';
-
 import Sidebar from './Sidebar';
-import { mapStyles } from './mapStyles';
 
+import { mapStyles } from './mapStyles';
 import ImagePlaceholder from './images/ImagePlaceholder.png';
-// https://github.com/SamHerbert/SVG-Loaders
+// svg icon by https://github.com/SamHerbert/SVG-Loaders
 import spinnerIcon from './images/puff.svg';
+
+import './App.css';
 
 import {
   GOOGLE_MAPS_KEY,
@@ -19,10 +19,10 @@ import {
 
 class App extends Component {
   state = {
-    map: {},
-    infoWindow: { maxWidth: 300 },
-    isMapReady: false,
     center: { lat: -23.5660791, lng: -46.652984 }, //Av paulista
+    infoWindow: { maxWidth: 400 },
+    isMapReady: false,
+    map: {},
     mapError: false
   };
 
@@ -30,16 +30,11 @@ class App extends Component {
     const { isScriptLoaded, isScriptLoadSucceed } = this.props;
     const { center, isMapReady, mapError } = this.state;
 
-    // console.log('===================');
-    // console.log('isScriptLoaded', isScriptLoaded);
-    // console.log('isScriptLoadSucceed', isScriptLoadSucceed);
-    // console.log('isMapReady', isMapReady);
-    // console.log('mapError', mapError);
-
+    // https://www.npmjs.com/package/react-async-script-loader
+    // isScriptLoaded - Boolean -> Represent scripts loading process is over or not, maybe part of scripts load failed.
+    // isScriptLoadSucceed - Boolean -> Represent all scripts load successfully or not.
     if (isScriptLoaded && isScriptLoadSucceed && !isMapReady) {
-      // console.log('1');
-      // if (!isMapReady) {
-      // create a new map with different styles
+      // create a new map with custom styles
       let map = new window.google.maps.Map(document.querySelector('#map'), {
         zoom: 17,
         center: new window.google.maps.LatLng(center),
@@ -57,7 +52,7 @@ class App extends Component {
       });
       // }
     } else if (!mapError && !isMapReady) {
-      // console.log('2');
+      // set an error state
       this.setState({
         mapError: true
       });
@@ -81,8 +76,6 @@ class App extends Component {
           contact,
           tips
         } = response;
-
-        // console.log(response);
 
         const venue = {
           name: name,
@@ -170,7 +163,7 @@ class App extends Component {
           </main>
         </div>
      `;
-        // console.log('err', err);
+
         infoWindow.setContent(contentString);
         infoWindow.open(map, coworking.marker);
       });
@@ -186,7 +179,6 @@ class App extends Component {
 
     return fetch(fsEndpoint)
       .then(response => {
-        // console.log(response);
         if (!response.ok) throw response;
 
         return response.json();
@@ -202,9 +194,9 @@ class App extends Component {
         <main className="main" role="main">
           {isMapReady ? (
             <Sidebar
-              map={map}
-              infoWindow={infoWindow}
               center={center}
+              infoWindow={infoWindow}
+              map={map}
               onOpenInfoWindow={this.handleItemClick}
             />
           ) : null}

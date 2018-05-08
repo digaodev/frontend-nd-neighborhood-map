@@ -11,10 +11,15 @@ import Location from './Location';
 
 import defaultIcon from './icons/iconDefaultLocation.svg';
 import activeIcon from './icons/iconActiveLocation.svg';
-// https://github.com/SamHerbert/SVG-Loaders
-import spinnerIcon from './images/puff.svg';
 
 class Sidebar extends Component {
+  static propTypes = {
+    center: PropTypes.object.isRequired,
+    infoWindow: PropTypes.object.isRequired,
+    map: PropTypes.object.isRequired,
+    onOpenInfoWindow: PropTypes.func.isRequired
+  };
+
   state = {
     filterTerm: '',
     locations: [],
@@ -33,10 +38,13 @@ class Sidebar extends Component {
 
   fetchCoworkingsFS = () => {
     const { lat, lng } = this.props.center;
+
     // https://developer.foursquare.com/docs/api/venues/search
     const fsURL = 'https://api.foursquare.com/v2/venues/search';
+
     // https://developer.foursquare.com/docs/resources/categories
-    const categoryId = '4bf58dd8d48988d174941735'; // coworking spaces category
+    const categoryId = '4bf58dd8d48988d174941735'; // category for coworking spaces
+
     const radius = 250;
 
     const fsEndpoint = `${fsURL}?ll=${lat},${lng}&client_id=${FSQUARE_CLIENT_ID}&client_secret=${FSQUARE_CLIENT_SECRET}&radius=${radius}&categoryId=${categoryId}&limit=30&v=20180504`;
@@ -50,7 +58,7 @@ class Sidebar extends Component {
       .then(data => {
         const { venues } = data.response;
 
-        // filter because of trash
+        // Even though theFoursquare API supports search by category, it still returns a lot of items from other categories. So the filter below is necessary
         return venues
           .filter(
             venue =>
@@ -99,7 +107,8 @@ class Sidebar extends Component {
   };
 
   clearMarkers = locations => {
-    //     To remove a marker from the map, call the setMap() method passing null as the argument.
+    // https://developers.google.com/maps/documentation/javascript/markers
+    // To remove a marker from the map, call the setMap() method passing null as the argument.
     locations.map(location => location.marker.setMap(null));
   };
 
@@ -134,27 +143,28 @@ class Sidebar extends Component {
 
     return (
       <aside className="sidebar">
-        <header className="header">
-          <span className="sidebar__icon office" />
-          <h1 className="sidebar__title"> Coworkings @ Paulista </h1>
-          <p className="sidebar__description">
+        <header className="sidebar__header">
+          <span className="sidebar__header__icon office" />
+          <h1 className="sidebar__header__title"> Coworkings @ Paulista </h1>
+          <p className="sidebar__header__description">
             Find the top 20 coworking spaces near Paulista Avenue, São Paulo
           </p>
 
           {!locationsError ? (
             <input
-              className="header__filter-input"
+              className="sidebar__header__filter-input"
               name="filter"
               type="text"
               placeholder="Filter by name..."
               value={this.state.filterTerm}
               onChange={this.handleFilterInputChange}
+              aria-label="Filter coworking list by name"
             />
           ) : null}
         </header>
 
         {!locationsError ? (
-          <ul>
+          <ul className="sidebar__locations-list">
             {filteredLocations.map(location => (
               <Location
                 key={location.id}

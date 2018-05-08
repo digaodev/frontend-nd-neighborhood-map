@@ -1,11 +1,17 @@
 import React, { Component } from 'react';
 
+import PropTypes from 'prop-types';
+
 class Location extends Component {
+  static propTypes = {
+    location: PropTypes.object.isRequired,
+    onItemHover: PropTypes.func.isRequired,
+    onItemBlur: PropTypes.func.isRequired,
+    onOpenInfoWindow: PropTypes.func.isRequired
+  };
+
   render() {
     const { location, onItemHover, onItemBlur, onOpenInfoWindow } = this.props;
-
-    // console.log(onItemHover);
-    // console.log(onOpenInfoWindow);
 
     return (
       <li
