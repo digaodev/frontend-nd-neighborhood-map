@@ -28,13 +28,12 @@ class Location extends Component {
           </span>
         </div>
         <button
-        // button is needed here for keyboard accessibility
+          // button is needed here for keyboard accessibility
           className="location-card__content"
-          role="button"
           tabIndex="0"
           aria-label={ariaLabel}
         >
-          <h3> {location.name} </h3>
+          {location.name}
         </button>
       </li>
     );

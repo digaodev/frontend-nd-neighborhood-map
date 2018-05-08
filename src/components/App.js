@@ -4,18 +4,18 @@ import asyncScriptLoader from 'react-async-script-loader';
 
 import Sidebar from './Sidebar';
 
-import { mapStyles } from './mapStyles';
-import ImagePlaceholder from './images/ImagePlaceholder.png';
+import { mapStyles } from '../utils/mapStyles';
+import ImagePlaceholder from '../images/ImagePlaceholder.png';
 // svg icon by https://github.com/SamHerbert/SVG-Loaders
-import spinnerIcon from './images/puff.svg';
+import spinnerIcon from '../images/puff.svg';
 
 import './App.css';
 
+import { fetchCoworkingDetailFS } from '../utils/foursquare';
+
 import {
   GOOGLE_MAPS_KEY,
-  FSQUARE_CLIENT_ID,
-  FSQUARE_CLIENT_SECRET
-} from './constants';
+} from '../utils/constants.js';
 
 class App extends Component {
   state = {
@@ -62,7 +62,7 @@ class App extends Component {
   handleItemClick = coworking => {
     const { map, infoWindow } = this.state;
 
-    this.fetchCoworkingDetailFS(coworking)
+    fetchCoworkingDetailFS(coworking)
       .then(response => {
         const {
           name,
@@ -106,17 +106,25 @@ class App extends Component {
               </a>`
           : 'No site available';
 
+        const imgAltText = `Image of ${venue.name}`;
+
         const contentString = `
           <div class="infow__container" tabIndex="0" aria-label="Map info window">
           <header class="infow__header">
-            <h2 class="infow__header__maintitle" tabIndex="0" >${venue.name}</h2>
-            <span class="infow__header__badge" tabIndex="0" >${venue.verified}</span>
-            <span class="infow__header__badge" tabIndex="0" >${venue.likes} LIKES</span>
+            <h2 class="infow__header__maintitle" tabIndex="0" >${
+              venue.name
+            }</h2>
+            <span class="infow__header__badge" tabIndex="0" >${
+              venue.verified
+            }</span>
+            <span class="infow__header__badge" tabIndex="0" >${
+              venue.likes
+            } LIKES</span>
           </header>
 
           <main class="infow__main">
           <div class="infow__main__img">
-            <img src=${venue.photo} alt=${venue.name}/>
+            <img src=${venue.photo} alt=${imgAltText}/>
           </div>
 
             <section class="infow__main__content">
@@ -169,23 +177,6 @@ class App extends Component {
       });
   };
 
-  fetchCoworkingDetailFS = location => {
-    // https://developer.foursquare.com/docs/api/venues/details
-    const fsURL = 'https://api.foursquare.com/v2/venues';
-
-    const fsEndpoint = `${fsURL}/${
-      location.id
-    }?client_id=${FSQUARE_CLIENT_ID}&client_secret=${FSQUARE_CLIENT_SECRET}&v=20180504`;
-
-    return fetch(fsEndpoint)
-      .then(response => {
-        if (!response.ok) throw response;
-
-        return response.json();
-      })
-      .then(data => data.response.venue);
-  };
-
   render() {
     const { map, infoWindow, isMapReady, center, mapError } = this.state;
 
@@ -204,13 +195,13 @@ class App extends Component {
           <div id="map" className="map" role="application">
             {mapError ? (
               <div className="map-error-message">
-                <h1>
+                <p>
                   The map was unable to load. Please try refreshing the page.
-                </h1>
+                </p>
               </div>
             ) : (
               <div className="map-loading-message">
-                <h1>Loading...</h1>
+                <p>Loading...</p>
                 <img src={spinnerIcon} className="spinner" alt="" />
               </div>
             )}

@@ -50,7 +50,7 @@
 .office {
   width: 40px;
   height: 40px;
-  background-image: url('./icons/office.svg');
+  background-image: url('../icons/office.svg');
 }
 
 .sidebar__header__title {
@@ -131,6 +131,7 @@
   border: none;
   font-size: 1.2rem;
   font-family: 'Inconsolata', sans-serif;
+  cursor: pointer;
 }
 
 /* MAP INFO WINDOW STYLES */

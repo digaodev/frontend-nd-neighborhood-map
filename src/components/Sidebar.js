@@ -5,12 +5,12 @@ import PropTypes from 'prop-types';
 import escapeRegExp from 'escape-string-regexp';
 import sortBy from 'sort-by';
 
-import { FSQUARE_CLIENT_ID, FSQUARE_CLIENT_SECRET } from './constants';
-
 import Location from './Location';
 
-import defaultIcon from './icons/iconDefaultLocation.svg';
-import activeIcon from './icons/iconActiveLocation.svg';
+import defaultIcon from '../icons/iconDefaultLocation.svg';
+import activeIcon from '../icons/iconActiveLocation.svg';
+
+import { fetchCoworkingsFS } from '../utils/foursquare';
 
 class Sidebar extends Component {
   static propTypes = {
@@ -27,7 +27,7 @@ class Sidebar extends Component {
   };
 
   componentDidMount() {
-    this.fetchCoworkingsFS()
+    fetchCoworkingsFS(this.props.center)
       .then(coworkings => {
         this.setState({ locations: coworkings });
       })
@@ -35,40 +35,6 @@ class Sidebar extends Component {
         this.setState({ locationsError: true });
       });
   }
-
-  fetchCoworkingsFS = () => {
-    const { lat, lng } = this.props.center;
-
-    // https://developer.foursquare.com/docs/api/venues/search
-    const fsURL = 'https://api.foursquare.com/v2/venues/search';
-
-    // https://developer.foursquare.com/docs/resources/categories
-    const categoryId = '4bf58dd8d48988d174941735'; // category for coworking spaces
-
-    const radius = 250;
-
-    const fsEndpoint = `${fsURL}?ll=${lat},${lng}&client_id=${FSQUARE_CLIENT_ID}&client_secret=${FSQUARE_CLIENT_SECRET}&radius=${radius}&categoryId=${categoryId}&limit=30&v=20180504`;
-
-    return fetch(fsEndpoint)
-      .then(response => {
-        if (!response.ok) throw response;
-
-        return response.json();
-      })
-      .then(data => {
-        const { venues } = data.response;
-
-        // Even though theFoursquare API supports search by category, it still returns a lot of items from other categories. So the filter below is necessary
-        return venues
-          .filter(
-            venue =>
-              venue.location.lat &&
-              venue.location.lng &&
-              venue.categories[0].id === categoryId
-          )
-          .slice(0, 20);
-      });
-  };
 
   handleFilterInputChange = event => {
     this.setState({
@@ -179,10 +145,10 @@ class Sidebar extends Component {
           </ul>
         ) : (
           <div className="list-error-message">
-            <h1>
+            <p>
               An error occurred while trying to load the co-workings list. Please
               try refreshing the page.
-            </h1>
+            </p>
           </div>
         )}
       </aside>
