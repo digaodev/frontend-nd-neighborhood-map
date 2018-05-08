@@ -144,10 +144,11 @@ class Sidebar extends Component {
     return (
       <aside className="sidebar">
         <header className="sidebar__header">
+          <p>Info provided by Google & Foursquare</p>
           <span className="sidebar__header__icon office" />
-          <h1 className="sidebar__header__title"> Coworkings @ Paulista </h1>
-          <p className="sidebar__header__description">
-            Find the top 20 coworking spaces near Paulista Avenue, São Paulo
+          <h1 className="sidebar__header__title" tabIndex="0"> Co-workings @ Paulista </h1>
+          <p className="sidebar__header__description" tabIndex="0">
+            Find the top 20 co-working spaces near Paulista Avenue, São Paulo
           </p>
 
           {!locationsError ? (
@@ -158,13 +159,14 @@ class Sidebar extends Component {
               placeholder="Filter by name..."
               value={this.state.filterTerm}
               onChange={this.handleFilterInputChange}
-              aria-label="Filter coworking list by name"
+              role="search"
+              aria-label="Filter co-working list by name"
             />
           ) : null}
         </header>
 
         {!locationsError ? (
-          <ul className="sidebar__locations-list">
+          <ul className="sidebar__locations-list" tabIndex="0" aria-label="List of co-workings">
             {filteredLocations.map(location => (
               <Location
                 key={location.id}
@@ -178,7 +180,7 @@ class Sidebar extends Component {
         ) : (
           <div className="list-error-message">
             <h1>
-              An error occurred while trying to load the coworkings list. Please
+              An error occurred while trying to load the co-workings list. Please
               try refreshing the page.
             </h1>
           </div>

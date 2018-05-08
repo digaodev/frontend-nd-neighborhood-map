@@ -13,6 +13,8 @@ class Location extends Component {
   render() {
     const { location, onItemHover, onItemBlur, onOpenInfoWindow } = this.props;
 
+    const ariaLabel = `View details on the map for ${location.name}`;
+
     return (
       <li
         className="location-card"
@@ -25,9 +27,15 @@ class Location extends Component {
             <h2> {location.marker.label.text} </h2>
           </span>
         </div>
-        <div className="location-card__content">
+        <button
+        // button is needed here for keyboard accessibility
+          className="location-card__content"
+          role="button"
+          tabIndex="0"
+          aria-label={ariaLabel}
+        >
           <h3> {location.name} </h3>
-        </div>
+        </button>
       </li>
     );
   }

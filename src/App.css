@@ -40,6 +40,7 @@
 .sidebar__header__icon {
   display: inline-block;
   color: #fff;
+  margin-top: 1rem;
   background-position: center;
   background-repeat: no-repeat;
   background-size: 30px;
@@ -79,6 +80,10 @@
 }
 
 /* SIDEBAR LOCATION LIST SYLES */
+.sidebar__locations-list {
+  outline: none;
+}
+
 .location-card {
   background-color: #fff;
   padding: 1rem;
@@ -121,6 +126,11 @@
   color: #333;
   margin-left: 1rem;
   flex: 1;
+  text-align: left;
+  outline: none;
+  border: none;
+  font-size: 1.2rem;
+  font-family: 'Inconsolata', sans-serif;
 }
 
 /* MAP INFO WINDOW STYLES */
@@ -236,16 +246,16 @@
     flex-shrink: 0;
     min-height: 0;
   }
-  .sidebar__icon {
+  .sidebar__header__icon {
     display: none;
   }
-  .sidebar__title {
+  .sidebar__header__title {
     margin: 0.5rem 0;
   }
-  .header__filter-input {
+  .sidebar__header__filter-input {
     display: none;
   }
-  .locations-list {
+  .sidebar__locations-list {
     display: none;
   }
 }

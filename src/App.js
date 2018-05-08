@@ -107,11 +107,11 @@ class App extends Component {
           : 'No site available';
 
         const contentString = `
-          <div class="infow__container">
+          <div class="infow__container" tabIndex="0" aria-label="Map info window">
           <header class="infow__header">
-            <h2 class="infow__header__maintitle">${venue.name}</h2>
-            <span class="infow__header__badge">${venue.verified}</span>
-            <span class="infow__header__badge">${venue.likes} LIKES</span>
+            <h2 class="infow__header__maintitle" tabIndex="0" >${venue.name}</h2>
+            <span class="infow__header__badge" tabIndex="0" >${venue.verified}</span>
+            <span class="infow__header__badge" tabIndex="0" >${venue.likes} LIKES</span>
           </header>
 
           <main class="infow__main">
@@ -120,22 +120,22 @@ class App extends Component {
           </div>
 
             <section class="infow__main__content">
-              <h3 class="infow__main__subtitle">Address</h3>
-              <p>${venue.address}</p>
+              <h3 class="infow__main__subtitle" tabIndex="0" >Address</h3>
+              <p tabIndex="0">${venue.address}</p>
 
-              <h3 class="infow__main__subtitle">Contacts</h3>
-              <p>Twitter: ${venue.twitter}</p>
-              <p>Phone: ${venue.phone}</p>
+              <h3 class="infow__main__subtitle" tabIndex="0" >Contacts</h3>
+              <p tabIndex="0">Twitter: ${venue.twitter}</p>
+              <p tabIndex="0">Phone: ${venue.phone}</p>
 
-              <h3 class="infow__main__subtitle">Site</h3>
-              <p>${siteVenue}</p>
+              <h3 class="infow__main__subtitle" tabIndex="0" >Site</h3>
+              <p tabIndex="0">${siteVenue}</p>
 
-              <h3 class="infow__main__subtitle">Tips</h3>
-              <p>${venue.tips}</p>
+              <h3 class="infow__main__subtitle" tabIndex="0" >Tips</h3>
+              <p tabIndex="0">${venue.tips}</p>
 
-              <p class="infow__main__more">
-                <a  href="${venue.canonicalUrl}" target="_blank">
-                  <span>See more on Foursquare</span>
+              <p class="infow__main__more" >
+                <a  href="${venue.canonicalUrl}" target="_blank"  tabIndex="0">
+                  See more on Foursquare
                 </a>
               </p>
             </section>
