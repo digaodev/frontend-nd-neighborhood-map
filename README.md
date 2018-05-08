@@ -20,7 +20,7 @@ To get started:
 
 * install all project dependencies with `npm install`
 
-* create a file named 'constants.js' in the root path add your own credentials:
+* create a file named `constants.js` in the root path and add your API credentials:
 
 ```js
 export const FSQUARE_CLIENT_ID = 'your-foursquare-client-id';
