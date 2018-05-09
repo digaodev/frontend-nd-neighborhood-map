@@ -14,6 +14,8 @@
 
 * The app's interface should be intuitive to use. For example, the input text area to filter locations should be easy to locate. It should be easy to understand what set of locations is being filtered. Selecting a location via list item or map marker should cause the map marker to bounce or in some other way animate to indicate that the location has been selected and associated info window should open above the map marker with additional information.
 
+* You can check the live completed project in [HERE](https://digaodev.github.io/frontend-nd-neighborhood-map/).
+
 ## How to run
 
 To get started:
