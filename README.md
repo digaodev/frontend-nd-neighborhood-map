@@ -20,6 +20,17 @@ To get started:
 
 * install all project dependencies with `npm install`
 
+  Notable dependencies:
+```js
+    "escape-string-regexp": "^1.0.5",
+
+    "prop-types": "^15.6.1",
+
+    "react-async-script-loader": "^0.3.0",
+    
+    "sort-by": "^1.2.0"
+```
+
 * create a file named `constants.js` in the root path and add your API credentials:
 
 ```js
