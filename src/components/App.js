@@ -13,9 +13,7 @@ import './App.css';
 
 import { fetchCoworkingDetailFS } from '../utils/foursquare';
 
-import {
-  GOOGLE_MAPS_KEY,
-} from '../utils/constants.js';
+import { GOOGLE_MAPS_KEY } from '../utils/constants.js';
 
 class App extends Component {
   state = {
@@ -23,7 +21,8 @@ class App extends Component {
     infoWindow: { maxWidth: 400 },
     isMapReady: false,
     map: {},
-    mapError: false
+    mapError: false,
+    isListVisible: true
   };
 
   componentDidUpdate() {
@@ -44,7 +43,7 @@ class App extends Component {
       // get a reference for the reusable infowindow
       const infoWindow = new window.google.maps.InfoWindow({});
 
-      // set all the state for the map
+      // set all the state for loading the map
       this.setState({
         map: map,
         infoWindow: infoWindow,
@@ -52,15 +51,28 @@ class App extends Component {
       });
       // }
     } else if (!mapError && !isMapReady) {
-      // set an error state
+      // set an error state if the map does not load
       this.setState({
         mapError: true
       });
     }
   }
 
+  toggleListVisible = () => {
+
+    this.setState({
+      isListVisible: !this.state.isListVisible
+    });
+  };
+
   handleItemClick = coworking => {
-    const { map, infoWindow } = this.state;
+    const { map, infoWindow, isListVisible } = this.state;
+
+    // if the sidebar is already closed, there is no need to toggle eg. when clicking on a marker directly on the map
+    // if the sidebar is showing, we need to hide it eg. click on the sidebar list
+    if (isListVisible) {
+      this.toggleListVisible();
+    }
 
     fetchCoworkingDetailFS(coworking)
       .then(response => {
@@ -178,7 +190,15 @@ class App extends Component {
   };
 
   render() {
-    const { map, infoWindow, isMapReady, center, mapError } = this.state;
+    const {
+      map,
+      infoWindow,
+      isMapReady,
+      center,
+      mapError,
+      isListVisible
+    } = this.state;
+
 
     return (
       <div className="App">
@@ -189,6 +209,8 @@ class App extends Component {
               infoWindow={infoWindow}
               map={map}
               onOpenInfoWindow={this.handleItemClick}
+              isListVisible={isListVisible}
+              toggleListVisible={this.toggleListVisible}
             />
           ) : null}
 

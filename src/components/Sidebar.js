@@ -86,11 +86,17 @@ class Sidebar extends Component {
   };
 
   render() {
-    const { onOpenInfoWindow } = this.props;
+    const { onOpenInfoWindow, isListVisible, toggleListVisible } = this.props;
     const { locations, filterTerm, locationsError } = this.state;
 
-    let filteredLocations;
+    let visibleClass;
+    if (isListVisible) {
+      visibleClass = 'show';
+    } else {
+      visibleClass = 'hide';
+    }
 
+    let filteredLocations;
     if (locations) {
       if (filterTerm) {
         this.clearMarkers(locations);
@@ -112,42 +118,55 @@ class Sidebar extends Component {
         <header className="sidebar__header">
           <p>Info provided by Google & Foursquare</p>
           <span className="sidebar__header__icon office" />
-          <h1 className="sidebar__header__title" tabIndex="0"> Co-workings @ Paulista </h1>
+          <h1 className="sidebar__header__title" tabIndex="0">
+            Co-workings @ Paulista
+          </h1>
           <p className="sidebar__header__description" tabIndex="0">
             Find the top 20 co-working spaces near Paulista Avenue, São Paulo
           </p>
-
-          {!locationsError ? (
+        </header>
+        <div className="sidebar__menu-toggle">
+          <button
+            className="roundButton"
+            onMouseDown={toggleListVisible}
+            aria-label="Toggle visibility for co-workings list"
+          />
+          <h1 className="sidebar__header__title">Co-workings @ Paulista</h1>
+        </div>
+        {!locationsError ? (
+          <div className={`sidebar__locations ${visibleClass}`}>
             <input
-              className="sidebar__header__filter-input"
+              className="sidebar__locations__filter-input"
               name="filter"
               type="text"
-              placeholder="Filter by name..."
+              placeholder="Filter a co-working by name..."
               value={this.state.filterTerm}
               onChange={this.handleFilterInputChange}
               role="search"
-              aria-label="Filter co-working list by name"
+              aria-label="Filter the co-working list by name"
             />
-          ) : null}
-        </header>
 
-        {!locationsError ? (
-          <ul className="sidebar__locations-list" tabIndex="0" aria-label="List of co-workings">
-            {filteredLocations.map(location => (
-              <Location
-                key={location.id}
-                location={location}
-                onItemHover={this.handleItemHover}
-                onItemBlur={this.handleItemBlur}
-                onOpenInfoWindow={onOpenInfoWindow}
-              />
-            ))}
-          </ul>
+            <ul
+              className="sidebar__locations__list"
+              tabIndex="0"
+              aria-label="List of co-workings"
+            >
+              {filteredLocations.map(location => (
+                <Location
+                  key={location.id}
+                  location={location}
+                  onItemHover={this.handleItemHover}
+                  onItemBlur={this.handleItemBlur}
+                  onOpenInfoWindow={onOpenInfoWindow}
+                />
+              ))}
+            </ul>
+          </div>
         ) : (
           <div className="list-error-message">
             <p>
-              An error occurred while trying to load the co-workings list. Please
-              try refreshing the page.
+              An error occurred while trying to load the co-workings list.
+              Please try refreshing the page.
             </p>
           </div>
         )}

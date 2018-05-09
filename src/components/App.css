@@ -1,4 +1,5 @@
 /* MAIN APP STYLES */
+
 .main {
   display: flex;
   max-height: 100vh;
@@ -20,6 +21,7 @@
 }
 
 /* SIDEBAR STYLES */
+
 .sidebar {
   background: #673ab7;
   background: linear-gradient(to right, #673ab7, #7f00ff);
@@ -29,6 +31,10 @@
   overflow-y: auto;
   min-width: 250px;
   min-height: 100vh;
+}
+
+.sidebar__menu-toggle {
+  display: none;
 }
 
 .sidebar__header {
@@ -64,11 +70,11 @@
   text-align: center;
 }
 
-.sidebar__header__filter-input {
+.sidebar__locations__filter-input {
   padding: 0.8rem;
   border: none;
   font-size: 1.1rem;
-  flex: 1;
+  width: 100%;
   margin: 1rem 0;
   border-radius: 0.5rem;
 }
@@ -80,7 +86,8 @@
 }
 
 /* SIDEBAR LOCATION LIST SYLES */
-.sidebar__locations-list {
+
+.sidebar__locations__list {
   outline: none;
 }
 
@@ -135,6 +142,7 @@
 }
 
 /* MAP INFO WINDOW STYLES */
+
 .infow__container {
   margin-bottom: 0.5rem;
   color: #333;
@@ -199,13 +207,37 @@
   margin: 1rem 0 0 0;
 }
 
+/* https://www.kirupa.com/react/smooth_sliding_menu_react_motion.htm */
+
+.roundButton {
+  background-color: #7f00ff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 10px solid #fff;
+  outline: none;
+  transition: all .3s ease-in-out;
+}
+
+.roundButton:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.roundButton:active {
+  border-color: #673ab7;
+  background-color: #FFF;
+}
+
 /* CSS SPINNER - animation by https://loading.io/css/ */
+
 .lds-ripple {
   display: inline-block;
   position: relative;
   width: 64px;
   height: 64px;
 }
+
 .lds-ripple div {
   position: absolute;
   border: 4px solid #fff;
@@ -213,9 +245,11 @@
   border-radius: 50%;
   animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
 }
+
 .lds-ripple div:nth-child(2) {
   animation-delay: -0.5s;
 }
+
 @keyframes lds-ripple {
   0% {
     top: 28px;
@@ -234,6 +268,7 @@
 }
 
 /* MEDIA QUERY STYLES */
+
 @media (max-width: 660px) {
   .main {
     flex-direction: column;
@@ -242,21 +277,41 @@
     flex-grow: 0;
     flex-shrink: 1;
   }
+
   .sidebar {
     flex-grow: 0;
     flex-shrink: 0;
     min-height: 0;
+    z-index: 100;
   }
-  .sidebar__header__icon {
+  .sidebar__menu-toggle {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .sidebar__header {
     display: none;
   }
-  .sidebar__header__title {
-    margin: 0.5rem 0;
+
+  .sidebar__locations {
+    width: 100vw;
+    height: 100%;
+    background: linear-gradient(to right, #673ab7, #7f00ff);
+    position: fixed;
+    top: 10;
+    left: 0;
+    padding: 1rem;
+    transition: all .3s ease;
+    overflow: scroll;
+    z-index: 100;
+    opacity: 1;
   }
-  .sidebar__header__filter-input {
-    display: none;
+  .sidebar__locations.hide {
+    z-index: 0;
+    transform: translate3d(-100vw, 0, 0);
   }
-  .sidebar__locations-list {
-    display: none;
+  .sidebar__locations.show {
+    z-index: 100;
+    transform: translate3d(0vw, 0, 0);
   }
 }
