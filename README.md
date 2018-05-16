@@ -16,6 +16,18 @@
 
 * You can check the live completed project in [HERE](https://digaodev.github.io/frontend-nd-neighborhood-map/).
 
+![Screen Shot for main](https://github.com/digaodev/frontend-nd-neighborhood-map/blob/docs/docs/Screen_main.png?raw=true)
+
+![Screen Shot for main filter](https://github.com/digaodev/frontend-nd-neighborhood-map/blob/docs/docs/Screen_main_filter.png?raw=true)
+
+![Screen Shot for main infowindow](https://github.com/digaodev/frontend-nd-neighborhood-map/blob/docs/docs/Screen_main_infowindow.png?raw=true)
+
+![Screen Shot for mobile](https://github.com/digaodev/frontend-nd-neighborhood-map/blob/docs/docs/Screen_mobile.png?raw=true)
+
+![Screen Shot for mobile filter](https://github.com/digaodev/frontend-nd-neighborhood-map/blob/docs/docs/Screen_mobile_filter.png?raw=true)
+
+![Screen Shot for mobile infowindow](https://github.com/digaodev/frontend-nd-neighborhood-map/blob/docs/docs/Screen_mobile_infowindow.png?raw=true)
+
 ## How to run
 
 To get started:
@@ -36,9 +48,9 @@ To get started:
 * create a file named `constants.js` in the root path and add your API credentials:
 
 ```js
-export const FSQUARE_CLIENT_ID = 'your-foursquare-client-id';
-export const FSQUARE_CLIENT_SECRET = 'your-foursquare-secret-id';
-export const GOOGLE_MAPS_KEY = 'your-google-maps-id';
+  export const FSQUARE_CLIENT_ID = '<your-foursquare-client-id>';
+  export const FSQUARE_CLIENT_SECRET = '<your-foursquare-secret-id>';
+  export const GOOGLE_MAPS_KEY = '<your-google-maps-id>';
 ```
 
 * start the development server with `npm start`
